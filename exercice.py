@@ -27,23 +27,52 @@ def trier_lettres(phrase : str) -> Tuple[dict, list]:
     return dict, sorted(dict.items(), key = lambda item : item[1], reverse = True)[0][0]
 
 
+
+
+
+
+
+
+
 ## EXERCICE 3
 
 import turtle
 
+#fun stufff
+def choisir_une_couleur(n):
+    if n ==1 :
+        turtle.color("green")
+    elif n == 2:
+        turtle.color("red")
+    elif n== 3 :
+        turtle.color("purple")
+    elif n== 4 :
+        turtle.color("blue")
+    elif n== 5:
+        turtle.color("yellow")
+    else:
+        turtle.color("orange")
 
-def recursive(chose):
 
-    turtle.forward(10*chose)
+#référence au petit prince
 
-    if chose != 0:
+def dessine_moi_un_arbre(iteration):
+    choisir_une_couleur(iteration)
+    turtle.forward(10*iteration)
+
+    if iteration != 0:
         turtle.left(25)
-        recursive(chose-1)
+        dessine_moi_un_arbre(iteration-1)
         turtle.right(50)
-        recursive(chose-1)
+        dessine_moi_un_arbre(iteration-1)
         turtle.left(25)
 
-    turtle.backward(10*chose)
+    turtle.backward(10*iteration)
+
+
+
+
+
 
 
     ## EXERCICE 4
@@ -69,8 +98,6 @@ def adn():
 
 if __name__ == '__main__':
     # TODO: Appelez vos fonctions ici
-    chaine = "attgcaatggtggtacatg"
-    sequence = "ca"
-    print("il y a "+ str(adn())+ '% de"'+ sequence+'".')
-
+    turtle.left(90)
+    dessine_moi_un_arbre(5)
 
