@@ -56,18 +56,21 @@ def choisir_une_couleur(n):
 
 #référence au petit prince
 
-def dessine_moi_un_arbre(iteration):
+def dessine_moi_un_arbre(iteration:int, angle:int, grandeur: int):
     choisir_une_couleur(iteration)
-    turtle.forward(10*iteration)
+    turtle.forward(grandeur*iteration)
 
     if iteration != 0:
-        turtle.left(25)
-        dessine_moi_un_arbre(iteration-1)
-        turtle.right(50)
-        dessine_moi_un_arbre(iteration-1)
-        turtle.left(25)
+        turtle.pensize(iteration)
+        turtle.left(angle)
 
-    turtle.backward(10*iteration)
+        dessine_moi_un_arbre((iteration-1), angle, grandeur)
+        turtle.right(angle*2)
+        dessine_moi_un_arbre((iteration-1), angle, grandeur)
+        turtle.left(angle)
+
+    turtle.pensize(iteration)
+    turtle.backward(grandeur*iteration)
 
 
 
@@ -99,5 +102,5 @@ def adn():
 if __name__ == '__main__':
     # TODO: Appelez vos fonctions ici
     turtle.left(90)
-    dessine_moi_un_arbre(5)
+    dessine_moi_un_arbre(5, 25, 10)
 
