@@ -15,10 +15,6 @@ def volume_elipsoide_2(axe_a=1, axe_b=1, axe_c=1, mv = 1) -> Tuple[float, float]
 
     #EXERCICE 2
 
-#En reprenant le 5e exercice du chapitre 6 sur les fréquences de lettres dans une phrase,
-#écrivez un programme qui trie les lettres à partir du dictionnaire et qui retourne la lettre avec la fréquence la plus haute,
-#en utilisant une fonction lambda.
-
 def trier_lettres(phrase : str) -> Tuple[dict, list]:
     dict =  {}
 
