@@ -102,5 +102,6 @@ def adn():
 if __name__ == '__main__':
     # TODO: Appelez vos fonctions ici
     turtle.left(90)
+    turtle.speed(3)
     dessine_moi_un_arbre(5, 25, 10)
 
